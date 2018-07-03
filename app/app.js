@@ -14,6 +14,10 @@ app.config(function ($routeProvider) {
             templateUrl: 'app/pages/records.html',
             controller: 'recordController'
         })
+        .when('/orders', {
+            templateUrl: 'app/pages/orders.html',
+            controller: 'ordersController'
+        })
         .otherwise({
             redirectTo: '/'
         })

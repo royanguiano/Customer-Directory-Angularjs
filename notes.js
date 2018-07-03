@@ -140,9 +140,71 @@ section: scope, controllers, modules
     }])
     
 Routing section
+    - history managment is taken care of by angular
+    - 
     referencing the ngRoute module?
     configuring Routes?
     How do we use the ng-view Directive?
+Factory and services?
+    overview and why use them?
+        -what? 
+            1. singleton {} perform tasks
+            2. crate and return custom {}
+            3. you can inject factory into: 
+                - controller
+                - other factories/services
+                - modules
+        -why? reusable code
+        - when? 
+            1. re-usable code
+            2. share state between controllers
+        
+    Role of factories? 
+        - ajax calls
+        - business rules
+        - calculations
+        - share data between controllers
+    How do create a factory?
+        - through a module. 
+    How do we add factory to module?
+    How does a factory work?
+        - http
+        - timeout
+        - window
+        - location
+        - q asynchrones process
+        - rootScope
+            - new scopes
+        - interval 
+        - filter
+        - log 
+    
+    service
+    different technic on declaring variables?
+    Ajax calls with factory and services?
+        - http
+            * http.head
+            * http.get
+            * http.post
+            * http.put
+            * http.delete
+            * http.jsonp
+            
+    
+constant and value section provider?
+    - module.value(key, value)
+    - Value example: app.value('version', '1.0')
+    - cant be injected to config()
+    
+    Constant example: 
+        app.constant('vesrion', '1.0')
+    - can be injected into config file
+    
+
+animation with boostrap section?
+ng-animate module
+
+
 How do you use them together?
 How do you orgnaize them?
 
