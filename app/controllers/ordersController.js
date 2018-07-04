@@ -24,6 +24,5 @@ app.controller('ordersController', ['$scope', 'customersService',
             scope.totalType = (scope.ordersTotal > 100) ? 'success' : 'danger'
         }
         init()
-
     }
 ])

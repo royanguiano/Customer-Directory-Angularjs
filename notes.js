@@ -201,50 +201,37 @@ constant and value section provider?
     - can be injected into config file
     
 
-animation with boostrap section?
-ng-animate module
+animation with boostrap section? 
+    http://augus.github.io/ngAnimate/
+    https://daneden.github.io/animate.css/
+
+    ng-animate module
+        - comes with ng directives
+        examples: 
+        ngClass : add/remove 
+        nghide/ngshow : add/remove
+        nginclude : enter/leave
+        ngrepeat : enter/leave/move
+        ngswitch : enter/leave
+        ngview : enter/leave 
+
+        css animation: 
+            1. transition
+                - example: transition: 0.5s linear all;
+                - timing function
+            2. animations keyframes
+                - example: animation: 0.5s keypress-animation;
+            3. javascript animation
+                - greensock
+                - jquery animations
+
+        steps to adding animation: 
+            1. include src file
+            2. add ngAnimate dependency to app module
+            3. build css animations or transictions properties to css file
+            4. add classes to directives like ng-repeat, ng-animation
+
 
 
 How do you use them together?
-How do you orgnaize them?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/
+How do you orgnaize them?*/
