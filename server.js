@@ -19,6 +19,37 @@ app.get('/customers/:id', function (req, res) {
 app.get('/customers', function (req, res) {
     res.json(customers)
 })
+
+app.get('/orders', function (req, res) {
+    var orders = []
+    customers.map((customer, i) => {
+        if (customer.orders.length) {
+            customer.orders.map((order) => {
+                orders.push(order)
+            })
+        }
+    })
+    res.json(orders)
+})
+
+app.delete('/customers/:id', function (req, res) {
+    let customerId = parseInt(req.params.id)
+    let data = {
+        status: true
+    }
+    customers.map((customer, i) => {
+        if (customer.id == customerId) {
+            customers.splice(i, 1)
+            data = {
+                status: true
+            }
+            return
+        }
+    })
+
+    res.json(data)
+})
+
 app.listen(8080)
 console.log('express listening on part 8080')
 var customers = [{

@@ -1,27 +1,29 @@
-app.controller('ordersController', ['$scope', 'customerService',
-    function (scope, customerService) {
+app.controller('ordersController', ['$scope', 'customersService',
+    function (scope, customersService) {
         scope.orders = null
         scope.ordersTotal = 0.0
         scope.totalType;
 
         function init() {
-            customerService.getOrders().then(function (orders) {
-                    scope.orders = orders
+            customersService.getOrders()
+                .then(function (orders) {
+                    scope.orders = orders.data
                     getOrdersTotal()
                 })
                 .catch(function (data, status) {
-                    console.log('error: ', data, status)
+                    console.log('error from customerService.js: ', data, status)
                 })
         }
 
         function getOrdersTotal() {
             var total = 0
-            scope.orders.map((order, i) => {
-                total += order.total
-            })
+            for (let i = 0; i < scope.orders.length; i++) {
+                total += scope.orders[i].total
+            }
             scope.ordersTotal = total
             scope.totalType = (scope.ordersTotal > 100) ? 'success' : 'danger'
         }
         init()
+
     }
 ])

@@ -1,0 +1,11 @@
+.ng-scope {
+    padding: 15px;
+}
+
+.delete {
+    cursor: pointer;
+}
+
+.nav-wrapper ul {
+    margin-right: 2%;
+}

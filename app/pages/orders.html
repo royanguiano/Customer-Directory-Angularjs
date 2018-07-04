@@ -7,13 +7,13 @@
         <th>Product</th>
         <th>Total</th>
     </tr>
-    <tr ng-repeat="order in orders | Filter:orderFilter | orderBy:'name'">
+    <tr ng-repeat="order in orders | filter: orderFilter | orderBy:'name'">
         <td>{{ order.product }}</td>
         <td>{{ order.total | currency }}</td>
     </tr>
     <tr>
         <tr ng-class="totalType">
-            <td>&nbsp;</td>
+            <td>Total: </td>
             <td>{{ ordersTotal | currency }}</td>
         </tr>
     </tr>
